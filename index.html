@@ -5,15 +5,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>car web</title>
 		<link rel="stylesheet" href="style.css" />
+		<script src="index.js"></script>
 	</head>
 	<body>
 		<header>
+			<img
+				onclick="openMenu()"
+				class="menu"
+				src="/images/LineMdCloseToMenuAltTransition.svg"
+				alt="menu"
+			/>
 			<nav>
+				<button onclick="closeMenu()" class="close">&times;</button>
 				<ul>
-					<li>
-						<button class="close">X</button>
-					</li>
-
 					<li>
 						<a href="#incio"><img src="/images/Home.svg" alt="home" /></a>
 					</li>
@@ -39,17 +43,25 @@
 			</section>
 
 			<section class="section2">
-				<img src="/images/car-badground-photo.jpg" alt="coche" />
-				<img src="/images/car-badground-photo.jpg" alt="coche" />
+				<img src="/images/car-badground-photo.jpg" alt="coche" loading="lazy" />
+				<img src="/images/car-badground-photo.jpg" alt="coche" loading="lazy" />
 			</section>
 		</main>
 
 		<footer>
-			<ul>
+			<ul class="list-1">
 				<li><a href="#enlace1">enlace1</a></li>
 				<li><a href="#enlace2">enlace2</a></li>
-				<li><a href="·enlace3">enlace3</a></li>
-				<li><a href="#enlace4">enlace4</a></li>
+			</ul>
+
+			<ul class="list-2">
+				<li><a href="#enlace1">enlace1</a></li>
+				<li><a href="#enlace2">enlace2</a></li>
+			</ul>
+
+			<ul class="list-3">
+				<li><a href="#enlace1">enlace1</a></li>
+				<li><a href="#enlace2">enlace2</a></li>
 			</ul>
 		</footer>
 	</body>

@@ -20,6 +20,7 @@
 }
 
 body{
+    overflow-x: hidden;
     background-color: #d7f4e4;
     display: grid;
     gap: 1em;
@@ -29,7 +30,6 @@ body{
                           "footer";
 }
 
-
 header{
     grid-area: header;
     background-color: var(--silver-tree-50);
@@ -38,8 +38,16 @@ header{
 nav{
     width: 100%;
     position: relative;
+    display: none;
 }
 
+nav.open{
+    display: block;
+}
+
+.menu{
+    width: 50px;
+}
 
 .close{
     background-color: #d7f4e4;
@@ -51,10 +59,15 @@ nav{
     position: absolute;
     top: 20%;
     left: 0 ; 
-    font-size: 1em;
+    font-size: 2em;
     border: none;   
     cursor: pointer;
 }
+
+nav.close {
+    display: none;
+}
+
 
 ul{
     display: flex;
@@ -76,9 +89,9 @@ a> img{
 main{
     min-height: 100dvh;
     grid-area: main;
-    background-color: #bbb;
+    background-color: var(--silver-tree-50);
     display: grid;
-    gap: 2em;
+    gap: 3em;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "section1"
                         "section2";
@@ -91,7 +104,7 @@ main{
     background-size: cover;
     background-position: center;
     filter: brightness(40%);
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,8 +120,6 @@ mix-blend-mode: screen;
 padding: 1em;
 background-color: var(--silver-tree-50);
 color: black;
-
-
 }
 
 .section2{
@@ -132,14 +143,18 @@ footer{
 }
 
 footer > ul{
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
 background-color: #b3e7ce;
-width: 100%;
+ width: 100%;
 }
 
-li{
+.list-1.list-2.list-3{
+display: flex;
+flex-wrap: wrap;
+}
+
+li > a{
     text-decoration: none;
-    color: var(--silver-tree-200);
+    color: var(--silver-tree-800);
+    text-transform: capitalize;
+    font-weight: bold;
 }
