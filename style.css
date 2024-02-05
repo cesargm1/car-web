@@ -41,6 +41,7 @@ justify-content: flex-start;
 flex-direction: column;
 min-height: 100dvh;
 gap: 5rem;
+grid-area: section2;
 
 /*min-height: 100vh;*/ /* put min-height if add another section*/ 
 }

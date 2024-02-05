@@ -17,13 +17,12 @@
         margin: 0%;
         min-height: 0%;
         padding: 0;
+        box-sizing: border-box;
     }
     
     body{
         overflow-x: hidden;
-        background-color: #d7f4e4;
         display: grid;
-        gap: 1em;
         grid-template-rows: min-content  1fr  min-content;
         grid-template-areas: "header"
                               "main"
@@ -79,6 +78,7 @@
         width: 100%;
         flex-wrap: wrap;
     }
+
     
     a> img{
         aspect-ratio: auto 3 / 2; 
@@ -118,25 +118,60 @@
     }
 
     footer{
-        grid-area: footer;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    footer > ul{
-    background-color: #b3e7ce;
-     width: 100%;
-    }
-    
-    li > a{
-        text-decoration: none;
-        color: var(--silver-tree-800);
-        text-transform: capitalize;
-        font-weight: bold;
+        background-color: var(--silver-tree-200);
+        color: var(--silver-tree-100);
+        box-shadow: 4px 7px 100px var(--silver-tree-950),
+        -3px 7px 50px inset var(--silver-tree-700);
+        display: grid;
+        grid-template-areas: "img-footer section-links iconos"
+                            "  copy           copy      copy"  ;
+
     }
 
-    p{
-        text-transform: capitalize;
-        font-weight: bold;
+
+    .img-footer{
+        grid-area: img-footer;
+        background-size: cover;
+        background-position: center;
+        background-image: url(/images/car-badground-photo.jpg);
+    }
+
+
+    .secton-links{
+        grid-area: section-links;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    footer .secton-links ul li a {
+        text-decoration: none;
+        color: var(--silver-tree-900);
+    }
+
+    footer .secton-links ul li a:hover {
+        border-bottom: solid var(--silver-tree-900) 3px;
+    }
+
+    .secton-footer3{
+        grid-area: iconos;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        flex-direction: column;
+        color: var(--silver-tree-950);
+    }
+
+    .secton-footer3 li {
+        list-style: none;
+    }
+    
+    .secton-footer4{
+        grid-area: copy;
+        background-color: var(--silver-tree-50);
+        text-align: center;
+        color: rgb(48, 46, 46);
+        padding: 1em;
     }
